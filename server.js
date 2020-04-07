@@ -13,7 +13,7 @@ if (port == null || port == "") {
 app.use(express.static("public"))
 
 let uri =
-  "mongodb+srv://todoappuser:terminusman@cluster0-dvnme.mongodb.net/TodoApp?retryWrites=true&w=majority"
+  "mongodb+srv://todoappuser:5UeeCvxHkx7QZVRS@cluster0-dvnme.mongodb.net/TodoApp?retryWrites=true&w=majority"
 mongodb.connect(
   uri,
   { useNewUrlParser: true, useUnifiedTopology: true },
