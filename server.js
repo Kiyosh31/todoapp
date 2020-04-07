@@ -19,7 +19,6 @@ mongodb.connect(
   { useNewUrlParser: true, useUnifiedTopology: true },
   function (err, client) {
     db = client.db()
-    app.listen(port)
   }
 )
 
@@ -133,3 +132,5 @@ app.post("/delete-item", (req, res) => {
     }
   )
 })
+
+app.listen(port)
