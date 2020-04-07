@@ -16,14 +16,10 @@ let uri =
   "mongodb+srv://todoappuser:terminusman@cluster0-dvnme.mongodb.net/TodoApp?retryWrites=true&w=majority"
 mongodb.connect(
   uri,
-  { useUnifiedTopology: true, useNewUrlParser: true },
-  (err, client) => {
-    if (err) {
-      console.log("Error: ", err)
-    } else {
-      db = client.db()
-      app.listen(port)
-    }
+  { useNewUrlParser: true, useUnifiedTopology: true },
+  function (err, client) {
+    db = client.db()
+    app.listen(port)
   }
 )
 
